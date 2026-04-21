@@ -1,65 +1,83 @@
-import Image from "next/image";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import Services from '@/components/sections/Services';
+import Projects from '@/components/sections/Projects';
+import Contact from '@/components/sections/Contact';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const filePath = path.join(process.cwd(), 'src/content/home-content.md');
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const { data } = matter(fileContent);
+
+  return {
+    title: data.title,
+    description: data.description,
+    keywords: data.keywords,
+  };
+}
 
 export default function Home() {
+  const filePath = path.join(process.cwd(), 'src/content/home-content.md');
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const { content } = matter(fileContent);
+
+  // We are going to map the frontmatter metadata for SEO, but render a fully custom Hero section.
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/* High-Impact "Growth" Hero Section */}
+      <section className="relative overflow-hidden bg-[#0A0F1C] text-white min-h-[90vh] flex items-center justify-center px-4">
+        {/* Dynamic Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+          <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[70%] rounded-full bg-indigo-600/20 blur-[140px]" />
+          <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-500/10 blur-[130px]" />
+          <div className="absolute top-[20%] left-[20%] w-[10%] h-[10%] rounded-full bg-indigo-300/30 blur-[80px]" />
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        </div>
+
+        <div className="container relative z-10 mx-auto text-center max-w-5xl">
+          <div className="inline-flex mb-8 px-5 py-2.5 rounded-full bg-indigo-950/50 border border-indigo-500/20 backdrop-blur-md items-center justify-center">
+            <span className="flex h-2 w-2 rounded-full bg-indigo-400 mr-3 animate-pulse"></span>
+            <span className="bg-gradient-to-r from-indigo-300 to-blue-300 bg-clip-text text-transparent font-bold tracking-wider text-xs uppercase">Markanızı Büyütün</span>
+          </div>
+          
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[1.1]">
+            Dijital Dünyanın <br/> <span className="bg-gradient-to-br from-indigo-400 via-blue-500 to-purple-500 text-transparent bg-clip-text drop-shadow-sm">Yeni Nesil Medya</span> Ajansı
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          
+          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+            Performans odaklı reklam stratejilerimiz, yaratıcı web tasarımlarımız ve ölçülebilir başarılarla markanızı ait olduğu yere taşıyoruz.
           </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            <Link href="/iletisim" className="w-full sm:w-auto px-10 py-5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl font-bold transition-all transform hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(79,70,229,0.6)] flex items-center justify-center gap-2">
+               Projeye Başla
+               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </Link>
+            <Link href="/#hizmetler" className="w-full sm:w-auto px-10 py-5 bg-white/5 hover:bg-white/10 text-white rounded-2xl font-bold transition-all backdrop-blur-md border border-white/10 flex items-center justify-center hover:-translate-y-1">
+               Hizmetleri İncele
+            </Link>
+          </div>
+          
+          {/* Social Proof Placeholder */}
+          <div className="mt-20 pt-10 border-t border-white/10 flex flex-col items-center">
+            <p className="text-sm font-medium text-slate-400 mb-6 uppercase tracking-widest">Güvenilen Markalar</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+               {/* Client Logos will go here, currently text placeholders */}
+               <div className="text-xl font-bold opacity-70">Marka 1</div>
+               <div className="text-xl font-bold opacity-70">Marka 2</div>
+               <div className="text-xl font-bold opacity-70">Marka 3</div>
+               <div className="text-xl font-bold opacity-70">Marka 4</div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      <Services />
+      <Projects />
+      <Contact />
+    </>
   );
 }

@@ -1,0 +1,15 @@
+{
+  "agencyName": "Karatay Medya",
+  "description": "Markanız için dijital çözümler üreten tam hizmet reklam ve PR ajansı. SEO, web tasarım, kurumsal kimlik ve sosyal medya yönetimi ile markanızı büyütüyoruz.",
+  "contact": {
+    "phone": "+90 530 000 00 00",
+    "email": "info@karataymedya.com",
+    "address": "Karatay, Konya, Türkiye"
+  },
+  "socialMedia": {
+    "instagram": "https://instagram.com/karataymedya",
+    "facebook": "https://facebook.com/karataymedya",
+    "linkedin": "https://linkedin.com/company/karataymedya",
+    "twitter": "https://twitter.com/karataymedya"
+  }
+}

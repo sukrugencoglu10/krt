@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Sosyal Medya Yönetimi",
+    "description": "Markanızın dijital dünyada doğru hedef kitleye ulaşması için stratejik ve etkileşim odaklı sosyal medya yönetimi sunuyoruz.",
+    "slug": "/services/sosyal-medya-yonetimi"
+  },
+  {
+    "title": "Web Tasarım ve Yazılım",
+    "description": "SEO uyumlu, hızlı, modern ve mobil uyumlu web siteleri ile dijital kimliğinizi baştan yaratıyoruz.",
+    "slug": "/services/web-tasarim"
+  },
+  {
+    "title": "Google Reklamları (Ads)",
+    "description": "Performans odaklı Google Ads kampanyaları ile müşterilerinizin sizi en çok aradığı anda karşılarına çıkıyoruz.",
+    "slug": "/services/google-reklamlari"
+  },
+  {
+    "title": "SEO Danışmanlığı",
+    "description": "Arama motorlarında üst sıralara yerleşerek organik trafiğinizi ve bilinirliğinizi kalıcı olarak artırıyoruz.",
+    "slug": "/services/seo-danismanligi"
+  },
+  {
+    "title": "Kurumsal Kimlik Tasarımı",
+    "description": "Logo, kartvizit ve marka yönergeleriyle firmanıza profesyonel ve akılda kalıcı bir imaj kazandırıyoruz.",
+    "slug": "/services/kurumsal-kimlik"
+  },
+  {
+    "title": "Grafik Tasarım",
+    "description": "Markanızın ruhunu yansıtan özgün, estetik ve görsel açıdan zengin tasarım hizmetleri sunuyoruz.",
+    "slug": "/services/grafik-tasarim"
+  }
+]

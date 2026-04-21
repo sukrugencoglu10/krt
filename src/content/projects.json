@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "slug": "krt-global-kurumsal-web-tasarim",
+    "client_name": "KRT Global",
+    "category": "Web Tasarım",
+    "year": "2024",
+    "cover_image": "/images/projects/krt_go.webp",
+    "description": "Kurumsal kimliği yansıtan modern ve erişilebilir web arayüzü tasarımı.",
+    "longDescription": "KRT Global markası için tamamen yeni nesil teknolojiler kullanılarak bir web platformu geliştirildi. Kullanıcı deneyimini (UX) merkeze alan arayüz kurgusu, mobil uyumlu ve SEO dostu mimariyle desteklendi. Bu sayede organik arama performansında büyük bir artış kaydedilirken, potansiyel müşterilerin sitede geçirdiği ortalama süre iki katına çıkarıldı."
+  },
+  {
+    "id": 2,
+    "slug": "krt-kurumsal-kimlik-rehberi",
+    "client_name": "KRT Kurumsal",
+    "category": "Kurumsal Kimlik",
+    "year": "2023",
+    "cover_image": "/images/projects/krt_ko.webp",
+    "description": "Marka prestijini artıran logo ve tüm kurumsal kimlik yönergelerinin oluşturulması.",
+    "longDescription": "Markanın modern ve teknolojik vizyonunu yansıtacak yenilikçi bir kurumsal kimlik oluşturuldu. Logo tasarımından başlayarak, basılı materyaller, sosyal medya şablonları ve dijital pazarlama ögeleri dahil tüm görsel dil baştan yaratıldı. Marka kimliği bir kitapçık haline getirilerek sürdürülebilir bir standart oluşturuldu."
+  },
+  {
+    "id": 3,
+    "slug": "techstart-b2b-seo-optimizasyonu",
+    "client_name": "TechStart Bilişim",
+    "category": "SEO",
+    "year": "2024",
+    "cover_image": "/images/projects/krt_go.webp",
+    "description": "Hedef kitle analizi ve organik arama sonuçlarında üst sıra yerleştirme çalışması.",
+    "longDescription": "B2B sektöründe rekabet eden TechStart Bilişim için pazar ve rakip analizi yapılarak kapsamlı bir strateji kurgulandı. Site içi (On-page) ve site dışı (Off-page) optimizasyonlar, odak anahtar kelime hedefleriyle desteklendi. 6 ay gibi kısa bir sürede firmanın arama görünürlüğü %180 artırıldı ve organik kanallardan elde edilen dönüşüm oranları maksimize edildi."
+  },
+  {
+    "id": 4,
+    "slug": "digital-plus-sosyal-medya-yonetimi",
+    "client_name": "Digital Plus",
+    "category": "Sosyal Medya",
+    "year": "2023",
+    "cover_image": "/images/projects/krt_ko.webp",
+    "description": "Geniş kitlelere ulaşan dinamik sosyal medya içerik yönetimi ve stratejisi.",
+    "longDescription": "Topluluk oluşturmak ve marka bilinirliğini ulusal boyuta taşımak amacıyla yenilikçi video ve görsel materyaller üretildi. Hedef kitleye özel, interaktif kampanya çekilişleri ve reel videoları sayesinde hesapların organik erişimi aylık 2 milyon seviyelerine çıkartıldı."
+  }
+]
